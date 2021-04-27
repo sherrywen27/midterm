@@ -4,7 +4,7 @@ from mysite import models
 from mysite import models, forms
 
 def index(request, pid=None, del_pass=None):
-    posts = models.Post.objects.filter(enabled=True).order_by('-pub_time')[:30]
+    posts = models.Post.objects.all()
     #posts = models.Post.objects.all().order_by('-pub_time')
     moods = models.Mood.objects.all()
     try:
